@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="HASHIRA — Contemporary fashion for every version of you.">
+
+    <title>HASHIRA — Modern Fashion</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="style.css">
+</head>
+
+
+<body>
+
+<!-- =====================================================
+     ANNOUNCEMENT
+===================================================== -->
+
+<div class="announcement"
+     id="announcement">
+
+    <span>
+        FREE SHIPPING ON ORDERS OVER ₹1,999
+    </span>
+
+    <button id="closeAnnouncement"
+            type="button"
+            aria-label="Close announcement">
+        ×
+    </button>
+
+</div>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="main-header">
+
+    <div class="header-inner">
+
+
+        <!-- MOBILE MENU -->
+
+        <button class="mobile-menu-btn"
+                id="mobileMenuButton"
+                type="button"
+                aria-label="Open menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+        <!-- LOGO -->
+
+        <a href="#home"
+           class="logo">
+
+            <img src="assets/images/hashira-logo.jpeg"
+                 alt="HASHIRA"
+                 class="logo-image"
+                 onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='flex';">
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="main-nav">
+
+            <a href="#home"
+               class="nav-link active">
+                SHOP
+            </a>
+
+            <a href="#menSection"
+               class="nav-link">
+                MEN
+            </a>
+
+            <a href="#womenSection"
+               class="nav-link">
+                WOMEN
+            </a>
+
+            <a href="#customizeSection"
+               class="nav-link">
+                CUSTOMIZE
+            </a>
+
+            <a href="#aboutSection"
+               class="nav-link">
+                ABOUT
+            </a>
+
+        </nav>
+
+
+        <!-- HEADER ACTIONS -->
+
+        <div class="header-right">
+
+
+            <!-- SEARCH -->
+
+            <button class="header-icon"
+                    id="searchButton"
+                    type="button"
+                    aria-label="Search">
+
+                <svg viewBox="0 0 24 24">
+
+                    <circle cx="11"
+                            cy="11"
+                            r="6.5">
+                    </circle>
+
+                    <path d="M16 16L21 21">
+                    </path>
+
+                </svg>
+
+            </button>
+
+
+            <!-- WISHLIST -->
+
+            <button class="header-icon"
+                    id="wishlistButton"
+                    type="button"
+                    aria-label="Wishlist">
+
+                <svg viewBox="0 0 24 24">
+
+                    <path d="
+                        M20.8 8.8
+                        C20.8 13.5 12 19 12 19
+                        S3.2 13.5 3.2 8.8
+                        C3.2 6 5.2 4 7.7 4
+                        C9.4 4 10.9 4.9 12 6.3
+                        C13.1 4.9 14.6 4 16.3 4
+                        C18.8 4 20.8 6 20.8 8.8Z">
+                    </path>
+
+                </svg>
+
+                <span id="wishlistCount"
+                      class="count-badge">
+                    0
+                </span>
+
+            </button>
+
+
+            <!-- CART -->
+
+            <button class="header-icon"
+                    id="cartButton"
+                    type="button"
+                    aria-label="Shopping bag">
+
+                <svg viewBox="0 0 24 24">
+
+                    <path d="M6 8h12l1 12H5L6 8Z">
+                    </path>
+
+                    <path d="
+                        M9 8V6
+                        C9 4.3 10.3 3 12 3
+                        C13.7 3 15 4.3 15 6V8">
+                    </path>
+
+                </svg>
+
+                <span id="cartCount"
+                      class="count-badge">
+                    0
+                </span>
+
+            </button>
+
+
+            <!-- ACCOUNT -->
+
+            <div class="account-area">
+
+                <a href="login.html"
+                   id="loginLink"
+                   class="login-link">
+                    SIGN IN
+                </a>
+
+
+                <button id="userAccount"
+                        class="user-account"
+                        type="button">
+
+                    <span id="userAvatar"
+                          class="user-avatar">
+                        U
+                    </span>
+
+                    <span id="userName">
+                        User
+                    </span>
+
+                </button>
+
+
+                <div id="accountDropdown"
+                     class="account-dropdown">
+
+                    <strong id="accountUserName">
+                        User
+                    </strong>
+
+                    <span id="accountUserEmail">
+                        user@example.com
+                    </span>
+
+                    <button id="ordersButton"
+                            type="button">
+                        MY ORDERS
+                    </button>
+
+                    <button id="accountButton"
+                            type="button">
+                        MY ACCOUNT
+                    </button>
+
+                    <button id="logoutButton"
+                            type="button">
+                        SIGN OUT
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     SEARCH PANEL
+===================================================== -->
+
+<div id="searchPanel"
+     class="search-panel">
+
+    <div class="search-inner">
+
+        <input type="search"
+               id="searchInput"
+               placeholder="Search HASHIRA..."
+               autocomplete="off">
+
+        <button id="closeSearch"
+                type="button">
+            ×
+        </button>
+
+    </div>
+
+    <div id="searchResults"
+         class="search-results">
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     MOBILE MENU
+===================================================== -->
+
+<aside id="mobileMenu"
+       class="mobile-menu">
+
+    <button id="closeMobileMenu"
+            type="button">
+        ×
+    </button>
+
+    <nav>
+
+        <a href="#home">
+            SHOP
+        </a>
+
+        <a href="#menSection">
+            MEN
+        </a>
+
+        <a href="#womenSection">
+            WOMEN
+        </a>
+
+        <a href="#customizeSection">
+            CUSTOMIZE
+        </a>
+
+        <a href="#aboutSection">
+            ABOUT
+        </a>
+
+    </nav>
+
+</aside>
+
+
+<!-- =====================================================
+     HOME / HERO
+===================================================== -->
+
+<main id="home">
+
+    <section class="hero">
+
+        <div id="heroImage"
+             class="hero-image">
+        </div>
+
+        <div class="hero-overlay">
+        </div>
+
+
+        <div class="hero-content">
+
+            <p class="hero-label">
+                THE NEW COLLECTION
+            </p>
+
+            <h1>
+                YOUR STYLE.<br>
+                YOUR STATEMENT.
+            </h1>
+
+            <p class="hero-description">
+                Contemporary essentials designed
+                for every version of you.
+            </p>
+
+
+            <div class="hero-actions">
+
+                <a href="#products"
+                   class="primary-button">
+
+                    SHOP COLLECTION
+                    <span>→</span>
+
+                </a>
+
+                <a href="#customizeSection"
+                   class="secondary-button">
+
+                    CUSTOMIZE
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         MEN COLLECTION BANNER
+    ================================================== -->
+
+    <section id="menSection"
+             class="collection-banner">
+
+        <div id="menBackground"
+             class="collection-background">
+        </div>
+
+        <div class="collection-overlay">
+        </div>
+
+        <div class="collection-content">
+
+            <p>
+                COLLECTION 01
+            </p>
+
+            <h2>
+                MEN
+            </h2>
+
+            <a href="#products"
+               data-filter-link="Men">
+                EXPLORE MEN →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         WOMEN COLLECTION BANNER
+    ================================================== -->
+
+    <section id="womenSection"
+             class="collection-banner">
+
+        <div id="womenBackground"
+             class="collection-background">
+        </div>
+
+        <div class="collection-overlay">
+        </div>
+
+        <div class="collection-content">
+
+            <p>
+                COLLECTION 02
+            </p>
+
+            <h2>
+                WOMEN
+            </h2>
+
+            <a href="#products"
+               data-filter-link="Women">
+                EXPLORE WOMEN →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         REAL PRODUCTS
+         
+         IMPORTANT:
+         Products are NOT hard-coded here.
+         script.js loads products from:
+         http://localhost:5000/api/products
+
+         Therefore your admin-uploaded products
+         appear here.
+    ================================================== -->
+
+    <section id="products"
+             class="products-section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <p class="section-label">
+                    DISCOVER
+                </p>
+
+                <h2>
+                    The latest edit
+                </h2>
+
+            </div>
+
+
+            <div class="category-tabs">
+
+                <button class="category-tab active"
+                        data-category="all"
+                        type="button">
+                    ALL
+                </button>
+
+                <button class="category-tab"
+                        data-category="Men"
+                        type="button">
+                    MEN
+                </button>
+
+                <button class="category-tab"
+                        data-category="Women"
+                        type="button">
+                    WOMEN
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div id="productGrid"
+             class="product-grid">
+
+            <div class="product-loading">
+
+                <div class="loading-spinner">
+                </div>
+
+                <p>
+                    LOADING COLLECTION
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div id="emptyProducts"
+             class="empty-products">
+
+            <h3>
+                No products available
+            </h3>
+
+            <p>
+                Upload products from the HASHIRA admin panel.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         CUSTOMIZATION
+    ================================================== -->
+
+    <section id="customizeSection"
+             class="customize-section">
+
+        <div id="customizeBackground"
+             class="customize-background">
+        </div>
+
+        <div class="customize-overlay">
+        </div>
+
+
+        <div class="customize-content">
+
+            <p class="section-label">
+                HASHIRA CUSTOM
+            </p>
+
+            <h2>
+                Make it<br>
+                yours.
+            </h2>
+
+            <p>
+                Choose your garment, colour and personal
+                details. Create a piece that is uniquely yours.
+            </p>
+
+            <button id="customizeButton"
+                    class="primary-button"
+                    type="button">
+
+                START CUSTOMIZING
+                <span>→</span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         CUSTOM BUILDER
+    ================================================== -->
+
+    <section id="customBuilder"
+             class="custom-builder">
+
+        <div class="builder-heading">
+
+            <p class="section-label">
+                CREATE YOUR PIECE
+            </p>
+
+            <h2>
+                Your design.
+            </h2>
+
+            <p>
+                Customize a HASHIRA piece before adding it
+                to your bag.
+            </p>
+
+        </div>
+
+
+        <div class="builder-layout">
+
+
+            <div class="custom-preview">
+
+                <div id="previewGarment"
+                     class="preview-garment">
+
+                    <span id="previewText">
+                        HASHIRA
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="builder-controls">
+
+                <label for="garmentType">
+                    GARMENT
+                </label>
+
+                <select id="garmentType">
+
+                    <option value="T-Shirt">
+                        T-Shirt
+                    </option>
+
+                    <option value="Hoodie">
+                        Hoodie
+                    </option>
+
+                    <option value="Shirt">
+                        Shirt
+                    </option>
+
+                    <option value="Jacket">
+                        Jacket
+                    </option>
+
+                </select>
+
+
+                <label>
+                    COLOUR
+                </label>
+
+                <div class="color-options">
+
+                    <button class="color-option active"
+                            type="button"
+                            data-color="#111111"
+                            style="background:#111111;">
+                    </button>
+
+                    <button class="color-option"
+                            type="button"
+                            data-color="#f4f4f2"
+                            style="background:#f4f4f2;">
+                    </button>
+
+                    <button class="color-option"
+                            type="button"
+                            data-color="#343a40"
+                            style="background:#343a40;">
+                    </button>
+
+                    <button class="color-option"
+                            type="button"
+                            data-color="#7b1e1e"
+                            style="background:#7b1e1e;">
+                    </button>
+
+                </div>
+
+
+                <label for="customText">
+                    PERSONAL TEXT
+                </label>
+
+                <input id="customText"
+                       type="text"
+                       maxlength="15"
+                       placeholder="HASHIRA">
+
+
+                <button id="addCustomCart"
+                        class="dark-button"
+                        type="button">
+
+                    ADD CUSTOM DESIGN — ₹2,999
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         ABOUT HASHIRA
+    ================================================== -->
+
+    <section id="aboutSection"
+             class="about-section">
+
+        <div class="about-content">
+
+            <p class="section-label">
+                ABOUT HASHIRA
+            </p>
+
+            <h2>
+                Fashion that feels<br>
+                like you.
+            </h2>
+
+            <p>
+                HASHIRA is built around individuality.
+                We create contemporary clothing with
+                clean silhouettes, considered details
+                and the freedom to make every piece
+                your own.
+            </p>
+
+        </div>
+
+
+        <div class="about-mark">
+
+            <img src="assets/images/hashira-logo.jpeg"
+                 alt="HASHIRA">
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         EDITORIAL
+    ================================================== -->
+
+    <section class="editorial-section">
+
+        <div class="editorial-text">
+
+            <p class="section-label">
+                DESIGNED FOR EVERYDAY
+            </p>
+
+            <h2>
+                Less trend.<br>
+                More you.
+            </h2>
+
+            <span>
+                Timeless silhouettes, considered details
+                and effortless style.
+            </span>
+
+        </div>
+
+
+        <div id="editorialBackground"
+             class="editorial-image">
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         NEWSLETTER
+    ================================================== -->
+
+    <section class="newsletter-section">
+
+        <div>
+
+            <p>
+                STAY IN THE LOOP
+            </p>
+
+            <h2>
+                Be the first to know.
+            </h2>
+
+            <span>
+                New collections, exclusive drops
+                and HASHIRA updates.
+            </span>
+
+        </div>
+
+
+        <form id="newsletterForm"
+              class="newsletter-form">
+
+            <input id="newsletterEmail"
+                   type="email"
+                   placeholder="Your email address"
+                   required>
+
+            <button type="submit">
+                SUBSCRIBE →
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-top">
+
+
+        <div class="footer-brand">
+
+            <img src="assets/images/hashira-logo.jpeg"
+                 alt="HASHIRA"
+                                  class="footer-logo">
+
+            <p>
+                Contemporary fashion for
+                every version of you.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                SHOP
+            </h3>
+
+            <a href="#products">
+                All Products
+            </a>
+
+            <a href="#menSection">
+                Men
+            </a>
+
+            <a href="#womenSection">
+                Women
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                ACCOUNT
+            </h3>
+
+            <a href="login.html">
+                Sign In
+            </a>
+
+            <a href="orders.html">
+                My Orders
+            </a>
+
+            <button id="footerCartButton"
+                    type="button">
+                Cart
+            </button>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                HASHIRA
+            </h3>
+
+            <a href="#customizeSection">
+                Customize
+            </a>
+
+            <a href="#aboutSection">
+                About
+            </a>
+
+            <a href="mailto:hashiraenterprise@gamil.com">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 HASHIRA. All Rights Reserved.
+        </span>
+
+        <div>
+
+            <a href="#">
+                PRIVACY
+            </a>
+
+            <a href="#">
+                TERMS
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     QUICK VIEW
+===================================================== -->
+
+<div id="quickViewOverlay"
+     class="quick-view-overlay">
+
+    <div class="quick-view">
+
+        <button id="quickClose"
+                class="quick-close"
+                type="button">
+            ×
+        </button>
+
+
+        <div id="quickImage"
+             class="quick-image">
+        </div>
+
+
+        <div class="quick-info">
+
+            <p id="quickCategory"
+               class="quick-category">
+                MEN
+            </p>
+
+            <h2 id="quickName">
+                Product
+            </h2>
+
+            <p id="quickPrice"
+               class="quick-price">
+                ₹0
+            </p>
+
+            <p id="quickDescription"
+               class="quick-description">
+            </p>
+
+
+            <div class="size-selection">
+
+                <span>
+                    SELECT SIZE
+                </span>
+
+                <div id="quickSizes">
+                </div>
+
+            </div>
+
+
+            <button id="quickAdd"
+                    class="quick-add"
+                    type="button">
+
+                ADD TO BAG →
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     CART OVERLAY
+===================================================== -->
+
+<div id="drawerOverlay"
+     class="drawer-overlay">
+</div>
+
+
+<!-- =====================================================
+     CART DRAWER
+===================================================== -->
+
+<aside id="cartDrawer"
+       class="cart-drawer">
+
+    <div class="drawer-header">
+
+        <h2>
+            Your Bag
+        </h2>
+
+        <button id="closeCart"
+                type="button">
+            ×
+        </button>
+
+    </div>
+
+
+    <div id="cartItems"
+         class="cart-items">
+
+        <div class="empty-cart">
+
+            <p>
+                Your bag is empty.
+            </p>
+
+            <button id="continueShopping"
+                    type="button">
+                CONTINUE SHOPPING
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+
+            <span>
+                TOTAL
+            </span>
+
+            <strong id="cartTotal">
+                ₹0
+            </strong>
+
+        </div>
+
+        <button id="checkoutButton"
+                class="checkout-button"
+                type="button">
+
+            CHECKOUT →
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- =====================================================
+     CHECKOUT MODAL
+===================================================== -->
+
+<div id="checkoutOverlay"
+     class="checkout-overlay">
+
+    <div class="checkout-modal">
+
+        <button id="closeCheckout"
+                class="checkout-close"
+                type="button">
+            ×
+        </button>
+
+
+        <div class="checkout-heading">
+
+            <p class="section-label">
+                HASHIRA
+            </p>
+
+            <h2>
+                Checkout
+            </h2>
+
+            <p>
+                Enter your delivery details to place your order.
+            </p>
+
+        </div>
+
+
+        <form id="checkoutForm"
+              class="checkout-form">
+
+
+            <div class="checkout-field">
+
+                <label for="checkoutPhone">
+                    PHONE NUMBER
+                </label>
+
+                <input id="checkoutPhone"
+                       type="tel"
+                       inputmode="numeric"
+                       maxlength="10"
+                       placeholder="10 digit mobile number"
+                       required>
+
+            </div>
+
+
+            <div class="checkout-field">
+
+                <label for="checkoutAddress">
+                    DELIVERY ADDRESS
+                </label>
+
+                <textarea id="checkoutAddress"
+                          rows="4"
+                          placeholder="House / Street / Area / City"
+                          required></textarea>
+
+            </div>
+
+
+            <div class="checkout-field">
+
+                <label for="checkoutPincode">
+                    PINCODE
+                </label>
+
+                <input id="checkoutPincode"
+                       type="text"
+                       inputmode="numeric"
+                       maxlength="6"
+                       placeholder="6 digit pincode"
+                       required>
+
+            </div>
+
+
+            <div class="checkout-summary">
+
+                <div>
+
+                    <span>
+                        ITEMS
+                    </span>
+
+                    <strong id="checkoutItemCount">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        SUBTOTAL
+                    </span>
+
+                    <strong id="checkoutSubtotal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        SHIPPING
+                    </span>
+
+                    <strong id="checkoutShipping">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <div class="checkout-grand-total">
+
+                    <span>
+                        TOTAL
+                    </span>
+
+                    <strong id="checkoutGrandTotal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <p id="checkoutMessage"
+               class="checkout-message">
+            </p>
+
+
+            <button id="placeOrderButton"
+                    class="place-order-button"
+                    type="submit">
+
+                PLACE ORDER →
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div id="toast"
+     class="toast">
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        HASHIRA — My Orders
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="orders.css"
+    >
+
+    <style>
+
+        /* =====================================================
+           HASHIRA LOGO
+        ===================================================== */
+
+        .brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            line-height: 0;
+        }
+
+        .hashira-logo {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            display: block;
+        }
+
+
+        /* TABLET */
+
+        @media (max-width: 768px) {
+
+            .hashira-logo {
+                width: 62px;
+                height: 62px;
+            }
+
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 480px) {
+
+            .hashira-logo {
+                width: 55px;
+                height: 55px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ===================================================== -->
+
+    <header class="orders-header">
+
+        <a
+            href="index.html"
+            class="brand"
+            aria-label="HASHIRA Home"
+        >
+
+            <img
+                src="assets/images/hashira-logo.jpeg"
+                alt="HASHIRA Logo"
+                class="hashira-logo"
+            >
+
+        </a>
+
+
+        <nav>
+
+            <a href="index.html">
+                SHOP
+            </a>
+
+            <a
+                href="orders.html"
+                class="active"
+            >
+                MY ORDERS
+            </a>
+
+            <a href="cart.html">
+                CART
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ===================================================== -->
+
+    <main class="orders-page">
+
+
+        <div class="orders-heading">
+
+            <p>
+                HASHIRA STORE
+            </p>
+
+            <h1>
+                MY ORDERS
+            </h1>
+
+        </div>
+
+
+
+        <!-- ORDER MESSAGE -->
+
+        <div
+            id="orderMessage"
+            class="order-message"
+        ></div>
+
+
+
+        <!-- ORDERS -->
+
+        <section
+            id="ordersContainer"
+            class="orders-container"
+        >
+
+            <div class="orders-loading">
+
+                LOADING ORDERS...
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         NOTIFICATION
+    ===================================================== -->
+
+    <div
+        id="orderNotification"
+        class="order-notification"
+    ></div>
+
+
+
+    <!-- =====================================================
+         SCRIPT
+    ===================================================== -->
+
+    <script
+        src="order.js"
+    ></script>
+
+
+</body>
+
+</html>

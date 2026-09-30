@@ -1,0 +1,837 @@
+/* =====================================================
+   HASHIRA REGISTER PAGE
+   MODERN FASHION EDITORIAL
+===================================================== */
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family:
+        "Inter",
+        sans-serif;
+
+    background: #f8f7f4;
+
+    color: #111;
+
+    min-height: 100vh;
+}
+
+
+button,
+input {
+    font-family: inherit;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.register-page {
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns:
+        55% 45%;
+
+    background: #fff;
+}
+
+
+/* =====================================================
+   IMAGE SIDE
+===================================================== */
+
+.fashion-side {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    color: #fff;
+}
+
+
+.fashion-image {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url(
+            "https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1400&q=90"
+        );
+
+    background-size: cover;
+
+    background-position: center;
+
+    transform: scale(1.02);
+
+    animation:
+        fashionZoom 12s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+
+@keyframes fashionZoom {
+
+    from {
+        transform: scale(1.02);
+    }
+
+    to {
+        transform: scale(1.07);
+    }
+
+}
+
+
+.fashion-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, .7),
+            rgba(0, 0, 0, .08) 70%,
+            rgba(0, 0, 0, .2)
+        );
+}
+
+
+/* =====================================================
+   IMAGE CONTENT
+===================================================== */
+
+.fashion-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    height: 100%;
+
+    padding: 45px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+
+.brand-mark {
+
+    font-size: 25px;
+
+    font-weight: 600;
+
+    letter-spacing: 8px;
+}
+
+
+.fashion-copy {
+
+    max-width: 470px;
+
+    padding-bottom: 35px;
+}
+
+
+.fashion-copy p {
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 18px;
+
+    opacity: .8;
+}
+
+
+.fashion-copy h2 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(
+            45px,
+            5vw,
+            76px
+        );
+
+    font-weight: 500;
+
+    line-height: .98;
+
+    margin-bottom: 25px;
+}
+
+
+.fashion-copy span {
+
+    display: block;
+
+    max-width: 350px;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            .78
+        );
+}
+
+
+/* =====================================================
+   REGISTER SIDE
+===================================================== */
+
+.register-side {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 45px 50px;
+}
+
+
+.register-container {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    animation:
+        fadeUp .7s ease;
+}
+
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(18px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE LOGO
+===================================================== */
+
+.mobile-logo {
+
+    display: none;
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+    letter-spacing: 7px;
+
+    margin-bottom: 45px;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.register-heading {
+
+    margin-bottom: 30px;
+}
+
+
+.eyebrow {
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: #999;
+
+    margin-bottom: 13px;
+}
+
+
+.register-heading h1 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 44px;
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    margin-bottom: 13px;
+}
+
+
+.subtitle {
+
+    color: #777;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.register-form {
+
+    width: 100%;
+}
+
+
+.form-group {
+
+    margin-bottom: 17px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    color: #555;
+
+    margin-bottom: 8px;
+}
+
+
+.form-group input {
+
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 14px;
+
+    border:
+        1px solid #deded9;
+
+    background: #fff;
+
+    color: #111;
+
+    font-size: 11px;
+
+    outline: none;
+
+    transition:
+        border-color .25s,
+        box-shadow .25s;
+}
+
+
+.form-group input::placeholder {
+
+    color: #aaa;
+}
+
+
+.form-group input:focus {
+
+    border-color: #111;
+
+    box-shadow:
+        0 0 0 1px #111;
+}
+
+
+/* =====================================================
+   PASSWORD
+===================================================== */
+
+.password-wrapper {
+
+    position: relative;
+}
+
+
+.password-wrapper input {
+
+    padding-right: 65px;
+}
+
+
+.password-toggle {
+
+    position: absolute;
+
+    right: 13px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    color: #777;
+}
+
+
+.password-toggle:hover {
+
+    color: #111;
+}
+
+
+/* =====================================================
+   PASSWORD STRENGTH
+===================================================== */
+
+.password-strength {
+
+    height: 2px;
+
+    background: #ededeb;
+
+    margin-top: 8px;
+
+    overflow: hidden;
+}
+
+
+.password-strength span {
+
+    display: block;
+
+    width: 0;
+
+    height: 100%;
+
+    background: #111;
+
+    transition:
+        width .3s;
+}
+
+
+.password-hint {
+
+    font-size: 8px;
+
+    color: #999;
+
+    margin-top: 6px;
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+.register-message {
+
+    min-height: 18px;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+
+    margin-bottom: 5px;
+}
+
+
+.register-message.error {
+
+    color: #b32d2d;
+}
+
+
+.register-message.success {
+
+    color: #28734a;
+}
+
+
+/* =====================================================
+   TERMS
+===================================================== */
+
+.terms-label {
+
+    display: flex;
+
+    align-items:
+        flex-start;
+
+    gap: 9px;
+
+    color: #777;
+
+    font-size: 9px;
+
+    line-height: 1.6;
+
+    margin:
+        5px 0 18px;
+
+    cursor: pointer;
+}
+
+
+.terms-label input {
+
+    width: 13px;
+
+    height: 13px;
+
+    margin-top: 2px;
+
+    accent-color: #111;
+
+    flex-shrink: 0;
+}
+
+
+.terms-label a {
+
+    color: #111;
+
+    text-decoration:
+        underline;
+
+    text-underline-offset: 2px;
+}
+
+
+/* =====================================================
+   REGISTER BUTTON
+===================================================== */
+
+.register-button {
+
+    width: 100%;
+
+    height: 53px;
+
+    border: none;
+
+    background: #111;
+
+    color: #fff;
+
+    padding:
+        0 19px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content:
+        space-between;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    transition:
+        background .25s,
+        transform .25s;
+}
+
+
+.register-button:hover {
+
+    background: #292929;
+
+    transform:
+        translateY(-1px);
+}
+
+
+.register-button:disabled {
+
+    opacity: .6;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+.button-arrow {
+
+    font-size: 18px;
+
+    font-weight: 300;
+
+    transition:
+        transform .25s;
+}
+
+
+.register-button:hover
+.button-arrow {
+
+    transform:
+        translateX(4px);
+}
+
+
+/* =====================================================
+   LOGIN LINK
+===================================================== */
+
+.login-link {
+
+    display: flex;
+
+    justify-content:
+        center;
+
+    gap: 5px;
+
+    margin-top: 25px;
+
+    font-size: 10px;
+
+    color: #888;
+}
+
+
+.login-link a {
+
+    color: #111;
+
+    font-weight: 500;
+
+    text-decoration:
+        underline;
+
+    text-underline-offset: 3px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.register-footer {
+
+    text-align: center;
+
+    margin-top: 32px;
+}
+
+
+.register-footer p {
+
+    color: #aaa;
+
+    font-size: 8px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (
+    max-width: 900px
+) {
+
+    .register-page {
+
+        grid-template-columns:
+            42% 58%;
+    }
+
+
+    .fashion-content {
+
+        padding: 30px;
+    }
+
+
+    .fashion-copy h2 {
+
+        font-size: 50px;
+    }
+
+
+    .register-side {
+
+        padding: 35px;
+    }
+
+}
+
+
+@media (
+    max-width: 700px
+) {
+
+    .register-page {
+
+        display: block;
+
+        min-height: 100vh;
+    }
+
+
+    .fashion-side {
+
+        display: none;
+    }
+
+
+    .register-side {
+
+        min-height: 100vh;
+
+        padding:
+            45px 25px;
+
+        align-items:
+            flex-start;
+    }
+
+
+    .mobile-logo {
+
+        display: block;
+    }
+
+
+    .register-container {
+
+        max-width: 460px;
+
+        margin: 0 auto;
+    }
+
+
+    .register-heading h1 {
+
+        font-size: 40px;
+    }
+
+}
+
+
+@media (
+    max-width: 420px
+) {
+
+    .register-side {
+
+        padding:
+            35px 20px;
+    }
+
+
+    .mobile-logo {
+
+        margin-bottom: 40px;
+    }
+
+
+    .register-heading h1 {
+
+        font-size: 37px;
+    }
+
+
+    .login-link {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 7px;
+    }
+
+}

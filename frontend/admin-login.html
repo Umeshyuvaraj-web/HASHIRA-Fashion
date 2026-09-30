@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>HASHIRA — Administration</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="admin-login.css"
+    >
+
+</head>
+
+
+<body>
+
+<main class="admin-login-page">
+
+
+    <!-- =========================================
+         LEFT VISUAL
+    ========================================== -->
+
+    <section class="admin-visual">
+
+        <div class="visual-image"></div>
+
+        <div class="visual-overlay"></div>
+
+
+        <div class="visual-content">
+
+
+            <div class="brand">
+
+                HASHIRA
+
+            </div>
+
+
+            <div class="visual-bottom">
+
+                <p class="visual-label">
+                    PRIVATE WORKSPACE
+                </p>
+
+                <h2>
+                    Shape the<br>
+                    next collection.
+                </h2>
+
+                <p class="visual-description">
+                    Manage products, inventory and
+                    orders from one powerful workspace.
+                </p>
+
+            </div>
+
+
+            <div class="visual-footer">
+
+                <span>
+                    HASHIRA ADMINISTRATION
+                </span>
+
+                <span>
+                    2026
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         LOGIN
+    ========================================== -->
+
+    <section class="admin-form-section">
+
+        <div class="admin-form-container">
+
+
+            <!-- TOP -->
+
+            <div class="top-row">
+
+                <a
+                    href="index.html"
+                    class="back-link"
+                >
+                    ← BACK TO STORE
+                </a>
+
+                <span class="secure-label">
+                    SECURE ACCESS
+                </span>
+
+            </div>
+
+
+            <!-- MOBILE LOGO -->
+
+            <div class="mobile-brand">
+                HASHIRA
+            </div>
+
+
+            <!-- HEADING -->
+
+            <div class="admin-heading">
+
+                <p>
+                    ADMINISTRATION
+                </p>
+
+                <h1>
+                    Welcome back.
+                </h1>
+
+                <span>
+                    Sign in to manage your HASHIRA store.
+                </span>
+
+            </div>
+
+
+            <!-- FORM -->
+
+            <form
+                id="adminLoginForm"
+                class="admin-login-form"
+            >
+
+
+                <!-- EMAIL -->
+
+                <div class="field">
+
+                    <label for="adminEmail">
+                        ADMIN EMAIL
+                    </label>
+
+                    <input
+                        type="email"
+                        id="adminEmail"
+                        name="email"
+                        placeholder="admin@hashira.com"
+                        autocomplete="username"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="field">
+
+                    <div class="field-label-row">
+
+                        <label for="adminPassword">
+                            PASSWORD
+                        </label>
+
+                    </div>
+
+
+                    <div class="password-box">
+
+                        <input
+                            type="password"
+                            id="adminPassword"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                        >
+                            SHOW
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <div
+                    id="loginMessage"
+                    class="login-message"
+                ></div>
+
+
+                <!-- LOGIN -->
+
+                <button
+                    type="submit"
+                    id="adminLoginButton"
+                    class="admin-login-button"
+                >
+
+                    <span>
+                        SIGN IN
+                    </span>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+            </form>
+
+
+            <!-- SECURITY -->
+
+            <div class="security-note">
+
+                <div class="lock-icon">
+                    ◇
+                </div>
+
+                <div>
+
+                    <strong>
+                        Protected workspace
+                    </strong>
+
+                    <p>
+                        This area is restricted to
+                        authorized HASHIRA administrators.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- BOTTOM -->
+
+            <div class="admin-footer">
+
+                <span>
+                    © 2026 HASHIRA
+                </span>
+
+                <span>
+                    ADMIN PORTAL
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="admin-login.js"></script>
+
+</body>
+
+</html>

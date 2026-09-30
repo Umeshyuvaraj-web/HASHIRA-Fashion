@@ -1,0 +1,299 @@
+/* =====================================================
+   HASHIRA ORDER SUCCESS
+===================================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    background: #f7f6f3;
+
+    color: #151515;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.success-header {
+
+    height: 78px;
+
+    background: white;
+
+    border-bottom: 1px solid #e5e3df;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 6%;
+
+}
+
+
+.brand {
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.success-page {
+
+    min-height:
+        calc(100vh - 78px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px 20px;
+
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.success-card {
+
+    width: 100%;
+
+    max-width: 560px;
+
+    background: white;
+
+    border: 1px solid #e4e2de;
+
+    padding: 60px 50px;
+
+    text-align: center;
+
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.success-icon {
+
+    width: 64px;
+
+    height: 64px;
+
+    margin: 0 auto 25px;
+
+    border: 1px solid #111;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+}
+
+
+/* =====================================================
+   TEXT
+===================================================== */
+
+.eyebrow {
+
+    color: #999;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.success-card h1 {
+
+    font-size: 28px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.success-message {
+
+    color: #777;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =====================================================
+   ORDER NUMBER
+===================================================== */
+
+.order-number-box {
+
+    background: #f7f6f3;
+
+    padding: 20px;
+
+    margin: 30px 0;
+
+}
+
+
+.order-number-box span {
+
+    display: block;
+
+    color: #999;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.order-number-box strong {
+
+    font-size: 17px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.success-actions {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+.primary-button,
+
+.secondary-button {
+
+    display: block;
+
+    padding: 15px;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.primary-button {
+
+    background: #111;
+
+    color: white;
+
+}
+
+
+.secondary-button {
+
+    border: 1px solid #111;
+
+    color: #111;
+
+}
+
+
+.primary-button:hover {
+
+    background: #333;
+
+}
+
+
+.secondary-button:hover {
+
+    background: #111;
+
+    color: white;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 550px) {
+
+    .success-card {
+
+        padding: 45px 25px;
+
+    }
+
+
+    .success-card h1 {
+
+        font-size: 23px;
+
+    }
+
+}

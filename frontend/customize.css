@@ -1,0 +1,916 @@
+/* =====================================================
+   HASHIRA CUSTOMIZE
+===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+
+    font-family: "Inter", sans-serif;
+
+    background: #f7f7f5;
+
+    color: #111;
+
+    min-height: 100vh;
+
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.customize-header {
+
+    height: 82px;
+
+    background: #fff;
+
+    border-bottom: 1px solid #e8e8e8;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 6vw;
+
+}
+
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.brand img {
+
+    width: 120px;
+
+    height: 45px;
+
+    object-fit: contain;
+
+}
+
+
+.customize-header nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+}
+
+
+.customize-header nav a {
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 500;
+
+}
+
+
+.customize-header nav a:hover {
+
+    opacity: 0.55;
+
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.customize-page {
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding: 75px 6vw 100px;
+
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.customize-heading {
+
+    margin-bottom: 70px;
+
+}
+
+
+.customize-heading p {
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color: #777;
+
+    margin-bottom: 18px;
+
+}
+
+
+.customize-heading h1 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(55px, 8vw, 105px);
+
+    font-weight: 500;
+
+    line-height: 0.9;
+
+    margin-bottom: 25px;
+
+}
+
+
+.customize-heading span {
+
+    font-size: 14px;
+
+    color: #777;
+
+}
+
+
+/* =====================================================
+   CUSTOMIZER
+===================================================== */
+
+.customizer {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(400px, 1fr)
+        minmax(400px, 520px);
+
+    gap: 90px;
+
+    align-items: start;
+
+}
+
+
+/* =====================================================
+   PREVIEW
+===================================================== */
+
+.preview-section {
+
+    position: sticky;
+
+    top: 30px;
+
+}
+
+
+.preview-card {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 650px;
+
+    aspect-ratio: 1 / 1.05;
+
+    background: #111;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+
+
+.preview-card img {
+
+    width: 72%;
+
+    height: 72%;
+
+    object-fit: contain;
+
+    transition: 0.4s ease;
+
+}
+
+
+.custom-text-preview {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    color: #fff;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    pointer-events: none;
+
+    white-space: nowrap;
+
+}
+
+
+.custom-text-preview.position-top {
+
+    top: 32%;
+
+}
+
+
+.custom-text-preview.position-bottom {
+
+    top: 68%;
+
+}
+
+
+.preview-label {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #777;
+
+    margin-top: 15px;
+
+}
+
+
+/* =====================================================
+   OPTIONS
+===================================================== */
+
+.options-section {
+
+    background: #fff;
+
+    padding: 40px;
+
+    border: 1px solid #e5e5e5;
+
+}
+
+
+.option-group {
+
+    position: relative;
+
+    margin-bottom: 35px;
+
+}
+
+
+.option-group > label {
+
+    display: block;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    font-weight: 600;
+
+    margin-bottom: 14px;
+
+}
+
+
+/* =====================================================
+   SELECT
+===================================================== */
+
+#productSelect {
+
+    width: 100%;
+
+    height: 52px;
+
+    border: 1px solid #d8d8d8;
+
+    background: #fff;
+
+    padding: 0 15px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    outline: none;
+
+}
+
+
+#productSelect:focus {
+
+    border-color: #111;
+
+}
+
+
+/* =====================================================
+   COLORS
+===================================================== */
+
+.color-options {
+
+    display: flex;
+
+    gap: 12px;
+
+}
+
+
+.color-option {
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    border: 2px solid #fff;
+
+    outline: 1px solid #d4d4d4;
+
+    cursor: pointer;
+
+    background: #111;
+
+}
+
+
+.color-option:nth-child(1) {
+    background: #111;
+}
+
+
+.color-option:nth-child(2) {
+    background: #fff;
+}
+
+
+.color-option:nth-child(3) {
+    background: #777;
+}
+
+
+.color-option:nth-child(4) {
+    background: #1f2937;
+}
+
+
+.color-option:nth-child(5) {
+    background: #8b4513;
+}
+
+
+.color-option.active {
+
+    outline: 2px solid #111;
+
+    outline-offset: 2px;
+
+}
+
+
+.selected-option {
+
+    font-size: 11px;
+
+    color: #777;
+
+    margin-top: 12px;
+
+}
+
+
+/* =====================================================
+   SIZES
+===================================================== */
+
+.size-options {
+
+    display: flex;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.size-option {
+
+    min-width: 48px;
+
+    height: 45px;
+
+    padding: 0 12px;
+
+    background: #fff;
+
+    border: 1px solid #d8d8d8;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.size-option:hover {
+
+    border-color: #111;
+
+}
+
+
+.size-option.active {
+
+    background: #111;
+
+    color: #fff;
+
+    border-color: #111;
+
+}
+
+
+/* =====================================================
+   CUSTOM TEXT
+===================================================== */
+
+#customText {
+
+    width: 100%;
+
+    height: 52px;
+
+    border: 1px solid #d8d8d8;
+
+    padding: 0 15px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    outline: none;
+
+}
+
+
+#customText:focus {
+
+    border-color: #111;
+
+}
+
+
+.character-count {
+
+    position: absolute;
+
+    right: 12px;
+
+    bottom: 16px;
+
+    font-size: 10px;
+
+    color: #999;
+
+}
+
+
+/* =====================================================
+   POSITION
+===================================================== */
+
+.position-options {
+
+    display: flex;
+
+    gap: 8px;
+
+}
+
+
+.position-option {
+
+    padding: 13px 16px;
+
+    background: #fff;
+
+    border: 1px solid #d8d8d8;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+}
+
+
+.position-option.active {
+
+    background: #111;
+
+    color: #fff;
+
+    border-color: #111;
+
+}
+
+
+/* =====================================================
+   QUANTITY
+===================================================== */
+
+.quantity-control {
+
+    display: flex;
+
+    align-items: center;
+
+    border: 1px solid #d8d8d8;
+
+    width: fit-content;
+
+}
+
+
+.quantity-control button {
+
+    width: 45px;
+
+    height: 45px;
+
+    border: none;
+
+    background: #fff;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+}
+
+
+.quantity-control button:hover {
+
+    background: #f1f1f1;
+
+}
+
+
+.quantity-control span {
+
+    width: 45px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================================
+   PRICE
+===================================================== */
+
+.price-summary {
+
+    border-top: 1px solid #e5e5e5;
+
+    padding-top: 25px;
+
+    margin-top: 15px;
+
+}
+
+
+.price-summary > div {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+
+}
+
+
+.price-summary span {
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    color: #777;
+
+}
+
+
+.price-summary strong {
+
+    font-size: 13px;
+
+}
+
+
+.price-summary .total-row {
+
+    border-top: 1px solid #e5e5e5;
+
+    padding-top: 20px;
+
+    margin-top: 20px;
+
+}
+
+
+.total-row span {
+
+    color: #111;
+
+    font-weight: 600;
+
+}
+
+
+.total-row strong {
+
+    font-size: 20px;
+
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.add-custom-button {
+
+    width: 100%;
+
+    height: 58px;
+
+    border: none;
+
+    background: #111;
+
+    color: #fff;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    margin-top: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    transition: 0.3s ease;
+
+}
+
+
+.add-custom-button:hover {
+
+    background: #333;
+
+}
+
+
+.add-custom-button span {
+
+    font-size: 18px;
+
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+.customize-message {
+
+    text-align: center;
+
+    margin-top: 18px;
+
+    font-size: 12px;
+
+    min-height: 18px;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .customizer {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+    }
+
+
+    .preview-section {
+
+        position: static;
+
+    }
+
+
+    .preview-card {
+
+        max-width: none;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .customize-header {
+
+        padding: 0 20px;
+
+        height: 70px;
+
+    }
+
+
+    .brand img {
+
+        width: 95px;
+
+    }
+
+
+    .customize-header nav {
+
+        gap: 12px;
+
+    }
+
+
+    .customize-header nav a {
+
+        font-size: 9px;
+
+    }
+
+
+    .customize-page {
+
+        padding: 50px 20px 70px;
+
+    }
+
+
+    .customize-heading {
+
+        margin-bottom: 45px;
+
+    }
+
+
+    .customize-heading h1 {
+
+        font-size: 55px;
+
+    }
+
+
+    .options-section {
+
+        padding: 25px 20px;
+
+    }
+
+
+    .position-options {
+
+        flex-wrap: wrap;
+
+    }
+
+}
+/* =========================================
+   CHECKOUT PRODUCT IMAGE
+   ========================================= */
+
+.checkout-items {
+    width: 100%;
+}
+
+.checkout-item {
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.checkout-item img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 280px;              /* CONTROL IMAGE HEIGHT HERE */
+    object-fit: cover;
+    object-position: center;
+    margin: 0 0 16px 0;
+}
+
+/* Product information below image */
+.checkout-item-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.checkout-item-name {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.checkout-item-price {
+    font-size: 14px;
+    white-space: nowrap;
+}
+.order-summary {
+    width: 100%;
+    max-width: 520px;
+    box-sizing: border-box;
+    padding: 48px;
+}
+
+.order-summary img {
+    max-width: 100%;
+    display: block;
+}

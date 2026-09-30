@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>HASHIRA — Checkout</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- IMPORTANT -->
+    <link
+        rel="stylesheet"
+        href="checkout.css"
+    >
+</head>
+
+<body>
+
+<header class="checkout-header">
+
+    <a href="index.html" class="checkout-logo">
+        HASHIRA
+    </a>
+
+    <a href="index.html" class="back-link">
+        ← BACK TO SHOP
+    </a>
+
+</header>
+
+
+<main class="checkout-page">
+
+    <!-- LEFT SIDE -->
+
+    <section class="checkout-form-section">
+
+        <p class="checkout-label">
+            HASHIRA CHECKOUT
+        </p>
+
+        <h1>
+            Complete your order
+        </h1>
+
+
+        <!-- CONTACT -->
+
+        <div class="checkout-step">
+
+            <div class="step-number">
+                01
+            </div>
+
+            <h2>
+                Contact information
+            </h2>
+
+            <label for="fullName">
+                FULL NAME *
+            </label>
+
+            <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                placeholder="Your full name"
+                autocomplete="name"
+            >
+
+
+            <label for="email">
+                EMAIL *
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+            >
+
+
+            <label for="phone">
+                PHONE *
+            </label>
+
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="10 digit mobile number"
+                maxlength="10"
+                autocomplete="tel"
+            >
+
+        </div>
+
+
+        <!-- SHIPPING -->
+
+        <div class="checkout-step">
+
+            <div class="step-number">
+                02
+            </div>
+
+            <h2>
+                Shipping address
+            </h2>
+
+
+            <label for="address">
+                ADDRESS *
+            </label>
+
+            <textarea
+                id="address"
+                name="address"
+                rows="4"
+                placeholder="House / Flat No., Street, Area"
+            ></textarea>
+
+
+            <div class="two-columns">
+
+                <div>
+
+                    <label for="city">
+                        CITY *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="city"
+                        name="city"
+                        placeholder="City"
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <label for="state">
+                        STATE *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="state"
+                        name="state"
+                        placeholder="State"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <label for="pincode">
+                PINCODE *
+            </label>
+
+            <input
+                type="text"
+                id="pincode"
+                name="pincode"
+                placeholder="6 digit pincode"
+                maxlength="6"
+            >
+
+        </div>
+
+
+        <!-- PAYMENT -->
+
+        <div class="checkout-step">
+
+            <div class="step-number">
+                03
+            </div>
+
+            <h2>
+                Payment method
+            </h2>
+
+
+            <div class="payment-options">
+
+                <label class="payment-option">
+
+                    <input
+                        type="radio"
+                        name="paymentMethod"
+                        value="cod"
+                        checked
+                    >
+
+                    <span>
+
+                        <strong>
+                            Cash on Delivery
+                        </strong>
+
+                        <small>
+                            Pay when your HASHIRA order arrives.
+                        </small>
+
+                    </span>
+
+                </label>
+
+
+                <label class="payment-option">
+
+                    <input
+                        type="radio"
+                        name="paymentMethod"
+                        value="upi"
+                    >
+
+                    <span>
+
+                        <strong>
+                            UPI
+                        </strong>
+
+                        <small>
+                            Demo payment — no real money is charged.
+                        </small>
+
+                    </span>
+
+                </label>
+
+
+                <label class="payment-option">
+
+                    <input
+                        type="radio"
+                        name="paymentMethod"
+                        value="card"
+                    >
+
+                    <span>
+
+                        <strong>
+                            Credit / Debit Card
+                        </strong>
+
+                        <small>
+                            Demo payment — no real money is charged.
+                        </small>
+
+                    </span>
+
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <!-- ERROR / SUCCESS -->
+
+        <div
+            id="checkoutMessage"
+            class="checkout-message"
+        ></div>
+
+
+        <button
+            type="button"
+            id="placeOrderButton"
+            class="place-order-button"
+        >
+            PLACE ORDER →
+        </button>
+
+
+        <p class="secure-message">
+            🔒 Your information is securely handled by HASHIRA.
+        </p>
+
+    </section>
+
+
+    <!-- RIGHT SIDE -->
+
+    <aside class="order-summary">
+
+        <p class="summary-label">
+            YOUR BAG
+        </p>
+
+        <h2>
+            Order summary
+        </h2>
+
+
+        <div
+            id="checkoutItems"
+            class="checkout-items"
+        ></div>
+
+
+        <div class="summary-line">
+
+            <span>
+                Items
+            </span>
+
+            <strong id="summaryItemCount">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="summary-line">
+
+            <span>
+                Subtotal
+            </span>
+
+            <strong id="summarySubtotal">
+                ₹0
+            </strong>
+
+        </div>
+
+
+        <div class="summary-line">
+
+            <span>
+                Shipping
+            </span>
+
+            <strong id="summaryShipping">
+                ₹0
+            </strong>
+
+        </div>
+
+
+        <div class="summary-total">
+
+            <span>
+                TOTAL
+            </span>
+
+            <strong id="summaryTotal">
+                ₹0
+            </strong>
+
+        </div>
+
+
+        <p class="free-shipping">
+            Free shipping on orders over ₹1,999.
+        </p>
+
+    </aside>
+
+</main>
+
+
+<script src="checkout.js"></script>
+
+</body>
+
+</html>

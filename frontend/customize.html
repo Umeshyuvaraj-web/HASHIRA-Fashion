@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        HASHIRA — Customize
+    </title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="customize.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ================================
+         HEADER
+    ================================= -->
+
+    <header class="customize-header">
+
+        <a
+            href="index.html"
+            class="brand"
+        >
+
+            <img
+                src="assets/images/hashira-logo.jpeg"
+                alt="HASHIRA"
+            >
+
+        </a>
+
+
+        <nav>
+
+            <a href="index.html">
+                SHOP
+            </a>
+
+            <a href="orders.html">
+                MY ORDERS
+            </a>
+
+            <a href="cart.html">
+                CART
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================================
+         PAGE
+    ================================= -->
+
+    <main class="customize-page">
+
+
+        <!-- HEADING -->
+
+        <section class="customize-heading">
+
+            <p>
+                HASHIRA STUDIO
+            </p>
+
+            <h1>
+                CUSTOMIZE
+            </h1>
+
+            <span>
+                Create a piece that feels uniquely yours.
+            </span>
+
+        </section>
+
+
+
+        <!-- ================================
+             CUSTOMIZER
+        ================================= -->
+
+        <section class="customizer">
+
+
+            <!-- PREVIEW -->
+
+            <div class="preview-section">
+
+                <div
+                    class="preview-card"
+                    id="previewCard"
+                >
+
+                    <img
+                        id="productPreview"
+                        src="assets/images/hashira-logo.jpeg"
+                        alt="Product Preview"
+                    >
+
+
+                    <div
+                        class="custom-text-preview"
+                        id="textPreview"
+                    >
+                        HASHIRA
+                    </div>
+
+                </div>
+
+
+                <p class="preview-label">
+                    LIVE PREVIEW
+                </p>
+
+            </div>
+
+
+
+            <!-- OPTIONS -->
+
+            <div class="options-section">
+
+
+                <!-- PRODUCT -->
+
+                <div class="option-group">
+
+                    <label>
+                        SELECT PRODUCT
+                    </label>
+
+
+                    <select id="productSelect">
+
+                        <option value="tshirt">
+                            Premium T-Shirt
+                        </option>
+
+                        <option value="hoodie">
+                            Signature Hoodie
+                        </option>
+
+                        <option value="shirt">
+                            Classic Shirt
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- COLOR -->
+
+                <div class="option-group">
+
+                    <label>
+                        SELECT COLOR
+                    </label>
+
+
+                    <div class="color-options">
+
+                        <button
+                            type="button"
+                            class="color-option active"
+                            data-color="#111111"
+                            data-name="Black"
+                            aria-label="Black"
+                        ></button>
+
+
+                        <button
+                            type="button"
+                            class="color-option"
+                            data-color="#ffffff"
+                            data-name="White"
+                            aria-label="White"
+                        ></button>
+
+
+                        <button
+                            type="button"
+                            class="color-option"
+                            data-color="#777777"
+                            data-name="Grey"
+                            aria-label="Grey"
+                        ></button>
+
+
+                        <button
+                            type="button"
+                            class="color-option"
+                            data-color="#1f2937"
+                            data-name="Navy"
+                            aria-label="Navy"
+                        ></button>
+
+
+                        <button
+                            type="button"
+                            class="color-option"
+                            data-color="#8b4513"
+                            data-name="Brown"
+                            aria-label="Brown"
+                        ></button>
+
+                    </div>
+
+
+                    <p
+                        id="selectedColor"
+                        class="selected-option"
+                    >
+                        Black
+                    </p>
+
+                </div>
+
+
+
+                <!-- SIZE -->
+
+                <div class="option-group">
+
+                    <label>
+                        SELECT SIZE
+                    </label>
+
+
+                    <div class="size-options">
+
+                        <button
+                            type="button"
+                            class="size-option"
+                            data-size="XS"
+                        >
+                            XS
+                        </button>
+
+                        <button
+                            type="button"
+                            class="size-option"
+                            data-size="S"
+                        >
+                            S
+                        </button>
+
+                        <button
+                            type="button"
+                            class="size-option active"
+                            data-size="M"
+                        >
+                            M
+                        </button>
+
+                        <button
+                            type="button"
+                            class="size-option"
+                            data-size="L"
+                        >
+                            L
+                        </button>
+
+                        <button
+                            type="button"
+                            class="size-option"
+                            data-size="XL"
+                        >
+                            XL
+                        </button>
+
+                        <button
+                            type="button"
+                            class="size-option"
+                            data-size="XXL"
+                        >
+                            XXL
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CUSTOM TEXT -->
+
+                <div class="option-group">
+
+                    <label
+                        for="customText"
+                    >
+                        ADD YOUR TEXT
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="customText"
+                        maxlength="20"
+                        placeholder="Enter custom text"
+                    >
+
+
+                    <div class="character-count">
+
+                        <span id="characterCount">
+                            0
+                        </span>
+
+                        / 20
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TEXT POSITION -->
+
+                <div class="option-group">
+
+                    <label>
+                        TEXT POSITION
+                    </label>
+
+
+                    <div class="position-options">
+
+                        <button
+                            type="button"
+                            class="position-option active"
+                            data-position="center"
+                        >
+                            CENTER
+                        </button>
+
+                        <button
+                            type="button"
+                            class="position-option"
+                            data-position="top"
+                        >
+                            TOP
+                        </button>
+
+                        <button
+                            type="button"
+                            class="position-option"
+                            data-position="bottom"
+                        >
+                            BOTTOM
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- QUANTITY -->
+
+                <div class="option-group">
+
+                    <label>
+                        QUANTITY
+                    </label>
+
+
+                    <div class="quantity-control">
+
+                        <button
+                            type="button"
+                            id="decreaseQuantity"
+                        >
+                            −
+                        </button>
+
+                        <span
+                            id="quantity"
+                        >
+                            1
+                        </span>
+
+                        <button
+                            type="button"
+                            id="increaseQuantity"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SUMMARY -->
+
+                <div class="price-summary">
+
+                    <div>
+
+                        <span>
+                            PRODUCT
+                        </span>
+
+                        <strong id="productPrice">
+                            ₹599
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            CUSTOMIZATION
+                        </span>
+
+                        <strong id="customizationPrice">
+                            ₹100
+                        </strong>
+
+                    </div>
+
+
+                    <div class="total-row">
+
+                        <span>
+                            TOTAL
+                        </span>
+
+                        <strong id="totalPrice">
+                            ₹699
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ADD TO CART -->
+
+                <button
+                    type="button"
+                    id="addCustomizedProduct"
+                    class="add-custom-button"
+                >
+
+                    ADD CUSTOMIZED PRODUCT
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+
+                <p
+                    id="customizeMessage"
+                    class="customize-message"
+                ></p>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================================
+         SCRIPT
+    ================================= -->
+
+    <script
+        src="customize.js"
+    ></script>
+
+</body>
+
+</html>

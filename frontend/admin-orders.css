@@ -1,0 +1,834 @@
+/* =====================================================
+   HASHIRA ADMIN ORDERS
+===================================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    background: #f5f4f1;
+
+    color: #151515;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar {
+
+    position: fixed;
+
+    left: 0;
+
+    top: 0;
+
+    width: 230px;
+
+    height: 100vh;
+
+    background: #111;
+
+    color: white;
+
+    padding: 35px 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.sidebar-brand {
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+}
+
+
+.admin-label {
+
+    color: #777;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    margin-top: 8px;
+
+}
+
+
+.sidebar-nav {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    margin-top: 55px;
+
+}
+
+
+.sidebar-nav a {
+
+    color: #aaa;
+
+    text-decoration: none;
+
+    padding: 14px 10px;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.sidebar-nav a:hover,
+
+.sidebar-nav a.active {
+
+    color: white;
+
+    background: #222;
+
+}
+
+
+.logout-button {
+
+    margin-top: auto;
+
+    background: transparent;
+
+    color: #999;
+
+    border: 1px solid #333;
+
+    padding: 13px;
+
+    cursor: pointer;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.logout-button:hover {
+
+    color: white;
+
+    border-color: white;
+
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.admin-main {
+
+    margin-left: 230px;
+
+    min-height: 100vh;
+
+    padding: 35px 45px;
+
+}
+
+
+/* =====================================================
+   TOPBAR
+===================================================== */
+
+.topbar {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 35px;
+
+}
+
+
+.topbar p {
+
+    color: #999;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.topbar h1 {
+
+    font-size: 25px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.admin-user {
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    padding: 12px 18px;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.order-stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.stat-card {
+
+    background: white;
+
+    border: 1px solid #e2e0dc;
+
+    padding: 22px;
+
+}
+
+
+.stat-card span {
+
+    display: block;
+
+    color: #999;
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.stat-card strong {
+
+    font-size: 25px;
+
+}
+
+
+/* =====================================================
+   TOOLBAR
+===================================================== */
+
+.orders-toolbar {
+
+    background: white;
+
+    border: 1px solid #e2e0dc;
+
+    padding: 18px 20px;
+
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+
+}
+
+
+.orders-toolbar label {
+
+    display: block;
+
+    color: #888;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.orders-toolbar select {
+
+    min-width: 190px;
+
+    height: 38px;
+
+    border: 1px solid #ccc;
+
+    background: white;
+
+    padding: 0 10px;
+
+    font-size: 10px;
+
+}
+
+
+.refresh-button {
+
+    height: 38px;
+
+    padding: 0 20px;
+
+    background: #111;
+
+    color: white;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =====================================================
+   ORDER CARD
+===================================================== */
+
+.order-card {
+
+    background: white;
+
+    border: 1px solid #e2e0dc;
+
+    margin-bottom: 20px;
+
+}
+
+
+.order-card-header {
+
+    padding: 20px 22px;
+
+    border-bottom: 1px solid #eee;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.order-number {
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 7px;
+
+}
+
+
+.order-date {
+
+    color: #999;
+
+    font-size: 9px;
+
+}
+
+
+.status-badge {
+
+    padding: 8px 12px;
+
+    background: #f1f1ef;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+.order-card-body {
+
+    padding: 22px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        300px;
+
+    gap: 30px;
+
+}
+
+
+/* =====================================================
+   CUSTOMER
+===================================================== */
+
+.customer-section h3,
+
+.address-section h3 {
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.customer-section p,
+
+.address-section p {
+
+    color: #666;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =====================================================
+   ITEMS
+===================================================== */
+
+.items-section {
+
+    margin-top: 25px;
+
+}
+
+
+.items-section h3 {
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.admin-order-item {
+
+    display: flex;
+
+    gap: 12px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #eee;
+
+}
+
+
+.admin-order-item img {
+
+    width: 55px;
+
+    height: 70px;
+
+    object-fit: cover;
+
+    background: #eee;
+
+}
+
+
+.item-info {
+
+    flex: 1;
+
+}
+
+
+.item-info strong {
+
+    display: block;
+
+    font-size: 11px;
+
+    margin-bottom: 6px;
+
+}
+
+
+.item-info span {
+
+    display: block;
+
+    color: #888;
+
+    font-size: 9px;
+
+    margin-bottom: 4px;
+
+}
+
+
+/* =====================================================
+   ORDER SUMMARY
+===================================================== */
+
+.order-summary {
+
+    border-left: 1px solid #eee;
+
+    padding-left: 25px;
+
+}
+
+
+.summary-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 14px;
+
+    font-size: 10px;
+
+}
+
+
+.summary-total {
+
+    border-top: 1px solid #ddd;
+
+    padding-top: 16px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.order-card-footer {
+
+    background: #fafaf8;
+
+    border-top: 1px solid #eee;
+
+    padding: 18px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.status-control {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.status-control label {
+
+    color: #888;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.status-control select {
+
+    height: 36px;
+
+    min-width: 150px;
+
+    border: 1px solid #ccc;
+
+    background: white;
+
+    padding: 0 8px;
+
+    font-size: 9px;
+
+}
+
+
+.save-status-button {
+
+    height: 36px;
+
+    background: #111;
+
+    color: white;
+
+    border: none;
+
+    padding: 0 18px;
+
+    cursor: pointer;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.save-status-button:hover {
+
+    background: #333;
+
+}
+
+
+/* =====================================================
+   LOADING / EMPTY
+===================================================== */
+
+.loading,
+
+.empty-orders {
+
+    background: white;
+
+    border: 1px solid #e2e0dc;
+
+    padding: 70px;
+
+    text-align: center;
+
+    color: #999;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+/* =====================================================
+   NOTIFICATION
+===================================================== */
+
+.notification {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    background: #111;
+
+    color: white;
+
+    padding: 15px 22px;
+
+    font-size: 11px;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    pointer-events: none;
+
+    transition: .25s ease;
+
+}
+
+
+.notification.show {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .order-stats {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+
+    .order-card-body {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .order-summary {
+
+        border-left: none;
+
+        border-top: 1px solid #eee;
+
+        padding-left: 0;
+
+        padding-top: 20px;
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .sidebar {
+
+        position: static;
+
+        width: 100%;
+
+        height: auto;
+
+    }
+
+
+    .sidebar-nav {
+
+        margin-top: 25px;
+
+    }
+
+
+    .admin-main {
+
+        margin-left: 0;
+
+        padding: 25px 18px;
+
+    }
+
+
+    .order-stats {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .topbar {
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+
+    .orders-toolbar {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+    }
+
+
+    .order-card-footer {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+    }
+
+}

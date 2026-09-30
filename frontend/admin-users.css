@@ -1,0 +1,583 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    background: #f5f4f1;
+
+    color: #111;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar {
+
+    position: fixed;
+
+    left: 0;
+
+    top: 0;
+
+    width: 230px;
+
+    height: 100vh;
+
+    background: #111;
+
+    color: white;
+
+    padding: 35px 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+}
+
+
+.sidebar-brand {
+
+    font-size: 24px;
+
+    letter-spacing: 5px;
+
+    font-weight: bold;
+
+}
+
+
+.admin-label {
+
+    color: #777;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    margin-top: 8px;
+
+}
+
+
+nav {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-top: 50px;
+
+    gap: 5px;
+
+}
+
+
+nav a {
+
+    color: #999;
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    padding: 14px 10px;
+
+}
+
+
+nav a:hover,
+
+nav a.active {
+
+    background: #222;
+
+    color: white;
+
+}
+
+
+.logout-button {
+
+    background: transparent;
+
+    border: 1px solid #333;
+
+    color: #999;
+
+    padding: 13px;
+
+    cursor: pointer;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.main {
+
+    margin-left: 230px;
+
+    padding: 40px;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 35px;
+
+}
+
+
+.header p {
+
+    color: #999;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.header h1 {
+
+    font-size: 25px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.admin-name {
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    padding: 13px 20px;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.stat {
+
+    background: white;
+
+    border: 1px solid #e2e0dc;
+
+    padding: 25px;
+
+}
+
+
+.stat span {
+
+    display: block;
+
+    color: #999;
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.stat strong {
+
+    font-size: 25px;
+
+}
+
+
+/* =====================================================
+   TOOLBAR
+===================================================== */
+
+.toolbar {
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    padding: 18px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.toolbar input {
+
+    flex: 1;
+
+    height: 40px;
+
+    border: 1px solid #ccc;
+
+    padding: 0 14px;
+
+    font-size: 10px;
+
+    outline: none;
+
+}
+
+
+.toolbar button {
+
+    background: #111;
+
+    color: white;
+
+    border: none;
+
+    padding: 0 25px;
+
+    cursor: pointer;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =====================================================
+   CUSTOMER CARD
+===================================================== */
+
+.customer-card {
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    margin-bottom: 12px;
+
+    padding: 22px;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr
+        1fr
+        1fr
+        1fr
+        auto;
+
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+
+.customer-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.customer-avatar {
+
+    width: 45px;
+
+    height: 45px;
+
+    background: #111;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 15px;
+
+}
+
+
+.customer-info strong {
+
+    display: block;
+
+    font-size: 11px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.customer-info span {
+
+    color: #999;
+
+    font-size: 9px;
+
+}
+
+
+.customer-data span {
+
+    display: block;
+
+    color: #999;
+
+    font-size: 7px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 6px;
+
+}
+
+
+.customer-data strong {
+
+    font-size: 11px;
+
+}
+
+
+.customer-role {
+
+    background: #f1f1ef;
+
+    padding: 7px 9px;
+
+    width: fit-content;
+
+    font-size: 7px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.view-customer {
+
+    background: #111;
+
+    color: white;
+
+    border: none;
+
+    padding: 11px 15px;
+
+    cursor: pointer;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.loading,
+
+.empty {
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    padding: 70px;
+
+    text-align: center;
+
+    color: #999;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =====================================================
+   NOTIFICATION
+===================================================== */
+
+.notification {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    background: #111;
+
+    color: white;
+
+    padding: 15px 22px;
+
+    font-size: 10px;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition: .25s;
+
+}
+
+
+.notification.show {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .stats {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .customer-card {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .sidebar {
+
+        position: static;
+
+        width: 100%;
+
+        height: auto;
+
+    }
+
+
+    .main {
+
+        margin-left: 0;
+
+        padding: 20px;
+
+    }
+
+
+    .stats {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .customer-card {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+    }
+
+}

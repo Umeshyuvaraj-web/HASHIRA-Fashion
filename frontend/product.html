@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="HASHIRA Product Details"
+    >
+
+    <title>HASHIRA — Product</title>
+
+    <link
+        rel="stylesheet"
+        href="product.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="product-header">
+
+        <a
+            href="index.html"
+            class="brand"
+        >
+            HASHIRA
+        </a>
+
+
+        <nav class="product-navigation">
+
+            <a href="index.html">
+                SHOP
+            </a>
+
+            <a href="orders.html">
+                MY ORDERS
+            </a>
+
+            <a href="login.html">
+                ACCOUNT
+            </a>
+
+            <a
+                href="cart.html"
+                class="cart-link"
+            >
+                CART
+                <span
+                    id="cartCount"
+                    class="cart-count"
+                >
+                    0
+                </span>
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================================
+         BREADCRUMB
+    ========================================== -->
+
+    <div class="breadcrumb">
+
+        <a href="index.html">
+            HOME
+        </a>
+
+        <span>
+            /
+        </span>
+
+        <span>
+            PRODUCT
+        </span>
+
+    </div>
+
+
+
+    <!-- =========================================
+         MAIN PRODUCT
+    ========================================== -->
+
+    <main
+        id="productContainer"
+        class="product-container"
+    >
+
+        <!-- Loading state -->
+
+        <div class="product-loading">
+
+            <div class="loading-spinner"></div>
+
+            <p>
+                LOADING PRODUCT...
+            </p>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================================
+         NOTIFICATION
+    ========================================== -->
+
+    <div
+        id="productNotification"
+        class="product-notification"
+    ></div>
+
+
+
+    <script
+        src="product.js"
+    ></script>
+
+</body>
+
+</html>

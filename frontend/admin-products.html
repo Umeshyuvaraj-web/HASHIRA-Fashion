@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="HASHIRA Admin Product Management"
+    >
+
+    <title>
+        HASHIRA — Products
+    </title>
+
+
+    <link
+        rel="stylesheet"
+        href="admin-products.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         SIDEBAR
+    ========================================== -->
+
+    <aside class="admin-sidebar">
+
+        <div class="admin-brand">
+            HASHIRA
+        </div>
+
+
+        <div class="admin-subtitle">
+            ADMIN PANEL
+        </div>
+
+
+        <nav class="admin-navigation">
+
+            <a href="admin.html">
+                <span>⌂</span>
+                DASHBOARD
+            </a>
+
+
+            <a
+                href="admin-products.html"
+                class="active"
+            >
+                <span>▦</span>
+                PRODUCTS
+            </a>
+
+
+            <a href="admin-orders.html">
+                <span>□</span>
+                ORDERS
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="admin-profile">
+
+                <div
+                    class="admin-avatar"
+                    id="adminAvatar"
+                >
+                    A
+                </div>
+
+
+                <div>
+
+                    <strong id="adminName">
+                        Administrator
+                    </strong>
+
+                    <span>
+                        ADMIN
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="logoutButton"
+                class="logout-button"
+            >
+                SIGN OUT
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main class="admin-main">
+
+
+        <!-- =====================================
+             HEADER
+        ====================================== -->
+
+        <header class="products-header">
+
+            <div>
+
+                <p class="page-eyebrow">
+                    HASHIRA STORE
+                </p>
+
+                <h1>
+                    PRODUCTS
+                </h1>
+
+                <p class="header-description">
+                    Manage your product catalogue and inventory.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="addProductButton"
+                class="add-product-button"
+            >
+
+                + ADD PRODUCT
+
+            </button>
+
+        </header>
+
+
+
+        <!-- =====================================
+             STATISTICS
+        ====================================== -->
+
+        <section class="product-statistics">
+
+
+            <div class="product-stat-card">
+
+                <span>
+                    TOTAL PRODUCTS
+                </span>
+
+                <strong id="totalProducts">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="product-stat-card">
+
+                <span>
+                    IN STOCK
+                </span>
+
+                <strong id="inStockProducts">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="product-stat-card">
+
+                <span>
+                    LOW STOCK
+                </span>
+
+                <strong id="lowStockProducts">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="product-stat-card">
+
+                <span>
+                    OUT OF STOCK
+                </span>
+
+                <strong id="outOfStockProducts">
+                    0
+                </strong>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             TOOLBAR
+        ====================================== -->
+
+        <section class="products-toolbar">
+
+            <div class="search-container">
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search products..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <select
+                id="stockFilter"
+                class="stock-filter"
+            >
+
+                <option value="all">
+                    ALL PRODUCTS
+                </option>
+
+                <option value="in-stock">
+                    IN STOCK
+                </option>
+
+                <option value="low-stock">
+                    LOW STOCK
+                </option>
+
+                <option value="out-of-stock">
+                    OUT OF STOCK
+                </option>
+
+            </select>
+
+
+            <button
+                type="button"
+                id="refreshButton"
+                class="refresh-button"
+            >
+
+                ↻ REFRESH
+
+            </button>
+
+        </section>
+
+
+
+        <!-- =====================================
+             MESSAGE
+        ====================================== -->
+
+        <div
+            id="productMessage"
+            class="product-message"
+        ></div>
+
+
+
+        <!-- =====================================
+             PRODUCT GRID
+        ====================================== -->
+
+        <section
+            id="productsContainer"
+            class="products-grid"
+        >
+
+            <div class="loading-products">
+                LOADING PRODUCTS...
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================
+         PRODUCT MODAL
+    ========================================== -->
+
+    <div
+        id="productModal"
+        class="modal-overlay"
+    >
+
+        <div class="product-modal">
+
+
+            <div class="modal-header">
+
+                <div>
+
+                    <p>
+                        HASHIRA CATALOGUE
+                    </p>
+
+                    <h2 id="modalTitle">
+                        ADD PRODUCT
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="closeModal"
+                    class="close-modal"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+
+            <!-- FORM -->
+
+            <form
+                id="productForm"
+                novalidate
+            >
+
+                <input
+                    type="hidden"
+                    id="productId"
+                >
+
+
+                <div class="form-grid">
+
+
+                    <!-- NAME -->
+
+                    <div class="form-group full">
+
+                        <label for="productName">
+                            PRODUCT NAME
+                        </label>
+
+                        <input
+                            type="text"
+                            id="productName"
+                            placeholder="e.g. Classic Black Shirt"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- PRICE -->
+
+                    <div class="form-group">
+
+                        <label for="productPrice">
+                            PRICE (₹)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="productPrice"
+                            min="0"
+                            step="1"
+                            placeholder="1499"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- STOCK -->
+
+                    <div class="form-group">
+
+                        <label for="productStock">
+                            STOCK
+                        </label>
+
+                        <input
+                            type="number"
+                            id="productStock"
+                            min="0"
+                            step="1"
+                            placeholder="20"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- CATEGORY -->
+
+                    <div class="form-group">
+
+                        <label for="productCategory">
+                            CATEGORY
+                        </label>
+
+                        <input
+                            type="text"
+                            id="productCategory"
+                            placeholder="Shirts"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- IMAGE -->
+
+                    <div class="form-group">
+
+                        <label for="productImage">
+                            IMAGE URL
+                        </label>
+
+                        <input
+                            type="url"
+                            id="productImage"
+                            placeholder="https://..."
+                        >
+
+                    </div>
+
+
+
+                    <!-- SIZES -->
+
+                    <div class="form-group full">
+
+                        <label for="productSizes">
+                            AVAILABLE SIZES
+                        </label>
+
+                        <input
+                            type="text"
+                            id="productSizes"
+                            placeholder="S, M, L, XL, XXL"
+                        >
+
+                        <small>
+                            Separate sizes with commas.
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- DESCRIPTION -->
+
+                    <div class="form-group full">
+
+                        <label for="productDescription">
+                            DESCRIPTION
+                        </label>
+
+                        <textarea
+                            id="productDescription"
+                            rows="5"
+                            placeholder="Describe the product..."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        id="cancelModal"
+                        class="cancel-button"
+                    >
+                        CANCEL
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        id="saveProductButton"
+                        class="save-button"
+                    >
+                        SAVE PRODUCT
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <script
+        src="admin-products.js"
+    ></script>
+
+</body>
+
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        HASHIRA — Sign In
+    </title>
+
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <link
+        rel="stylesheet"
+        href="login.css"
+    >
+
+
+    <!-- =====================================================
+         HASHIRA LOGO STYLES
+    ====================================================== -->
+
+    <style>
+
+        .brand-mark {
+            display: flex;
+            align-items: center;
+        }
+
+
+        .fashion-logo {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+            display: block;
+        }
+
+
+        .mobile-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 0;
+        }
+
+
+        .mobile-logo img {
+            width: 75px;
+            height: 75px;
+            object-fit: contain;
+            display: block;
+        }
+
+
+        /* TABLET */
+
+        @media (max-width: 768px) {
+
+            .fashion-logo {
+                width: 75px;
+                height: 75px;
+            }
+
+
+            .mobile-logo img {
+                width: 68px;
+                height: 68px;
+            }
+
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 480px) {
+
+            .mobile-logo img {
+                width: 62px;
+                height: 62px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         LOGIN PAGE
+    ====================================================== -->
+
+    <main class="login-page">
+
+
+        <!-- =========================================
+             FASHION IMAGE
+        ========================================== -->
+
+        <section class="fashion-side">
+
+            <div class="fashion-image"></div>
+
+            <div class="fashion-overlay"></div>
+
+
+            <div class="fashion-content">
+
+
+                <!-- HASHIRA LOGO -->
+
+                <div class="brand-mark">
+
+                    <img
+                        src="assets/images/hashira-logo.jpeg"
+                        alt="HASHIRA Logo"
+                        class="fashion-logo"
+                    >
+
+                </div>
+
+
+                <div class="fashion-copy">
+
+                    <p>
+                        THE NEW EDIT
+                    </p>
+
+
+                    <h2>
+                        Dress your<br>
+                        individuality.
+                    </h2>
+
+
+                    <span>
+                        Discover contemporary styles
+                        made for every version of you.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             LOGIN SECTION
+        ========================================== -->
+
+        <section class="login-side">
+
+            <div class="login-container">
+
+
+                <!-- =====================================
+                     MOBILE LOGO
+                ====================================== -->
+
+                <a
+                    href="index.html"
+                    class="mobile-logo"
+                    aria-label="HASHIRA Home"
+                >
+
+                    <img
+                        src="assets/images/hashira-logo.jpeg"
+                        alt="HASHIRA Logo"
+                    >
+
+                </a>
+
+
+
+                <!-- =====================================
+                     HEADING
+                ====================================== -->
+
+                <div class="login-heading">
+
+                    <p class="eyebrow">
+                        WELCOME BACK
+                    </p>
+
+
+                    <h1>
+                        Sign in
+                    </h1>
+
+
+                    <p class="subtitle">
+                        Access your HASHIRA account
+                        and continue shopping.
+                    </p>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     FORM
+                ====================================== -->
+
+                <form
+                    id="loginForm"
+                    class="login-form"
+                >
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label
+                            for="email"
+                        >
+                            EMAIL ADDRESS
+                        </label>
+
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="form-group">
+
+                        <div class="label-row">
+
+                            <label
+                                for="password"
+                            >
+                                PASSWORD
+                            </label>
+
+
+                            <a
+                                href="#"
+                                id="forgotPassword"
+                            >
+                                Forgot password?
+                            </a>
+
+                        </div>
+
+
+                        <div class="password-wrapper">
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+
+                            <button
+                                type="button"
+                                id="togglePassword"
+                                class="password-toggle"
+                                aria-label="Show password"
+                            >
+                                SHOW
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- REMEMBER -->
+
+                    <div class="remember-row">
+
+                        <label class="checkbox-label">
+
+                            <input
+                                type="checkbox"
+                                id="rememberMe"
+                            >
+
+
+                            <span>
+                                Remember me
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+
+                    <!-- ERROR -->
+
+                    <div
+                        id="loginMessage"
+                        class="login-message"
+                    ></div>
+
+
+
+                    <!-- LOGIN BUTTON -->
+
+                    <button
+                        type="submit"
+                        id="loginButton"
+                        class="login-button"
+                    >
+
+                        <span>
+                            SIGN IN
+                        </span>
+
+
+                        <span class="button-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+                </form>
+
+
+
+                <!-- =====================================
+                     DIVIDER
+                ====================================== -->
+
+                <div class="divider">
+
+                    <span></span>
+
+
+                    <p>
+                        OR
+                    </p>
+
+
+                    <span></span>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     GUEST
+                ====================================== -->
+
+                <button
+                    type="button"
+                    id="guestButton"
+                    class="guest-button"
+                >
+                    CONTINUE AS GUEST
+                </button>
+
+
+
+                <!-- =====================================
+                     REGISTER
+                ====================================== -->
+
+                <div class="register-link">
+
+                    <span>
+                        New to HASHIRA?
+                    </span>
+
+
+                    <a href="register.html">
+                        Create an account
+                    </a>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     FOOTER
+                ====================================== -->
+
+                <div class="login-footer">
+
+                    <p>
+
+                        By continuing, you agree to our
+
+                        <a href="#">
+                            Terms
+                        </a>
+
+                        and
+
+                        <a href="#">
+                            Privacy Policy
+                        </a>.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="login.js"></script>
+
+
+</body>
+
+</html>

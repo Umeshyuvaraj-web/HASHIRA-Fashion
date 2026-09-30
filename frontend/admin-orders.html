@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        HASHIRA — Admin Orders
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="admin-orders.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         SIDEBAR
+    ========================================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+            HASHIRA
+        </div>
+
+
+        <div class="admin-label">
+            ADMIN PANEL
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="admin.html">
+                DASHBOARD
+            </a>
+
+            <a href="admin-products.html">
+                PRODUCTS
+            </a>
+
+            <a
+                href="admin-orders.html"
+                class="active"
+            >
+                ORDERS
+            </a>
+
+        </nav>
+
+
+        <button
+            type="button"
+            id="logoutButton"
+            class="logout-button"
+        >
+            SIGN OUT
+        </button>
+
+    </aside>
+
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main class="admin-main">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <p>
+                    HASHIRA STORE
+                </p>
+
+                <h1>
+                    ORDER MANAGEMENT
+                </h1>
+
+            </div>
+
+
+            <div class="admin-user">
+
+                <span
+                    id="adminName"
+                >
+                    ADMIN
+                </span>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =====================================
+             STATISTICS
+        ====================================== -->
+
+        <section
+            id="orderStats"
+            class="order-stats"
+        >
+
+            <div class="stat-card">
+
+                <span>
+                    TOTAL ORDERS
+                </span>
+
+                <strong id="totalOrders">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>
+                    PLACED
+                </span>
+
+                <strong id="placedOrders">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>
+                    PROCESSING
+                </span>
+
+                <strong id="processingOrders">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>
+                    SHIPPED
+                </span>
+
+                <strong id="shippedOrders">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>
+                    DELIVERED
+                </span>
+
+                <strong id="deliveredOrders">
+                    0
+                </strong>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             FILTER
+        ====================================== -->
+
+        <section class="orders-toolbar">
+
+            <div>
+
+                <label for="statusFilter">
+                    FILTER BY STATUS
+                </label>
+
+
+                <select
+                    id="statusFilter"
+                >
+
+                    <option value="ALL">
+                        ALL ORDERS
+                    </option>
+
+                    <option value="PLACED">
+                        PLACED
+                    </option>
+
+                    <option value="CONFIRMED">
+                        CONFIRMED
+                    </option>
+
+                    <option value="PROCESSING">
+                        PROCESSING
+                    </option>
+
+                    <option value="SHIPPED">
+                        SHIPPED
+                    </option>
+
+                    <option value="DELIVERED">
+                        DELIVERED
+                    </option>
+
+                    <option value="CANCELLED">
+                        CANCELLED
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="refreshOrders"
+                class="refresh-button"
+            >
+                REFRESH
+            </button>
+
+        </section>
+
+
+
+        <!-- =====================================
+             ORDERS
+        ====================================== -->
+
+        <section
+            id="ordersContainer"
+            class="orders-container"
+        >
+
+            <div class="loading">
+                LOADING ORDERS...
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         NOTIFICATION
+    ========================================== -->
+
+    <div
+        id="adminNotification"
+        class="notification"
+    ></div>
+
+
+    <script
+        src="admin-orders.js"
+    ></script>
+
+</body>
+
+</html>

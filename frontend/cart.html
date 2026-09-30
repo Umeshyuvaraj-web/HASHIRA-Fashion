@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>HASHIRA — Cart</title>
+
+    <link
+        rel="stylesheet"
+        href="cart.css"
+    >
+
+    <style>
+
+        /* =====================================================
+           HASHIRA LOGO
+        ===================================================== */
+
+        .brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .brand img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            display: block;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ===================================================== -->
+
+    <header class="cart-header">
+
+        <a
+            href="index.html"
+            class="brand"
+        >
+
+            <img
+                src="assets/images/hashira-logo.jpeg"
+                alt="HASHIRA Logo"
+            >
+
+        </a>
+
+
+        <nav>
+
+            <a href="index.html">
+                SHOP
+            </a>
+
+            <a href="orders.html">
+                MY ORDERS
+            </a>
+
+            <a href="cart.html">
+                CART
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ===================================================== -->
+
+    <main class="cart-page">
+
+
+        <div class="page-heading">
+
+            <p>
+                HASHIRA STORE
+            </p>
+
+            <h1>
+                YOUR CART
+            </h1>
+
+        </div>
+
+
+
+        <div
+            id="cartContainer"
+            class="cart-layout"
+        >
+
+            <!-- Cart content loaded by cart.js -->
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         CART NOTIFICATION
+    ===================================================== -->
+
+    <div
+        id="cartNotification"
+        class="cart-notification"
+    ></div>
+
+
+
+    <!-- =====================================================
+         SCRIPT
+    ===================================================== -->
+
+    <script
+        src="cart.js"
+    ></script>
+
+
+</body>
+
+</html>

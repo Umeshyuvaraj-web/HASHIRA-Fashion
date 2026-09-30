@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        HASHIRA — Customers
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="admin-users.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div>
+
+            <div class="sidebar-brand">
+                HASHIRA
+            </div>
+
+            <div class="admin-label">
+                ADMIN PANEL
+            </div>
+
+
+            <nav>
+
+                <a href="admin.html">
+                    01 &nbsp; DASHBOARD
+                </a>
+
+
+                <a href="admin-products.html">
+                    02 &nbsp; PRODUCTS
+                </a>
+
+
+                <a href="admin-orders.html">
+                    03 &nbsp; ORDERS
+                </a>
+
+
+                <a
+                    href="admin-users.html"
+                    class="active"
+                >
+                    04 &nbsp; CUSTOMERS
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <button
+            id="logoutButton"
+            class="logout-button"
+        >
+            SIGN OUT
+        </button>
+
+    </aside>
+
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+
+        <header class="header">
+
+            <div>
+
+                <p>
+                    HASHIRA STORE
+                </p>
+
+                <h1>
+                    CUSTOMER MANAGEMENT
+                </h1>
+
+            </div>
+
+
+            <div
+                id="adminName"
+                class="admin-name"
+            >
+                ADMIN
+            </div>
+
+        </header>
+
+
+
+        <!-- STATISTICS -->
+
+        <section class="stats">
+
+            <div class="stat">
+
+                <span>
+                    TOTAL CUSTOMERS
+                </span>
+
+                <strong
+                    id="totalCustomers"
+                >
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat">
+
+                <span>
+                    ACTIVE CUSTOMERS
+                </span>
+
+                <strong
+                    id="activeCustomers"
+                >
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat">
+
+                <span>
+                    TOTAL ORDERS
+                </span>
+
+                <strong
+                    id="totalCustomerOrders"
+                >
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat">
+
+                <span>
+                    CUSTOMER SPENDING
+                </span>
+
+                <strong
+                    id="customerRevenue"
+                >
+                    ₹0
+                </strong>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- TOOLBAR -->
+
+        <section class="toolbar">
+
+            <input
+                type="text"
+                id="searchCustomer"
+                placeholder="SEARCH CUSTOMER..."
+            >
+
+
+            <button
+                id="refreshCustomers"
+            >
+                REFRESH
+            </button>
+
+        </section>
+
+
+
+        <!-- CUSTOMERS -->
+
+        <section
+            id="customersContainer"
+            class="customers-container"
+        >
+
+            <div class="loading">
+                LOADING CUSTOMERS...
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <div
+        id="notification"
+        class="notification"
+    ></div>
+
+
+    <script
+        src="admin-users.js"
+    ></script>
+
+</body>
+
+</html>
